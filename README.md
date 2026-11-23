@@ -48,8 +48,13 @@ Ham dosya `data/higher_education_students_performance.csv` olarak değiştirilme
 │   ├── tables/               betimsel ve test tabloları (CSV)
 │   └── sonuc.json            özet sonuçlar
 ├── docs/uml/                 Use Case, Class, Activity (.puml + .png)
+├── docs/ekran_goruntuleri/   GitHub ve Colab ekran görüntüleri
+├── docs/video/               proje videosu (proje_videosu.mp4)
 └── rapor/                    vize raporu (.docx)
 ```
+
+## Proje videosu
+[docs/video/proje_videosu.mp4](docs/video/proje_videosu.mp4): GitHub deposu ve Colab çalışmalarının 1,5 dakikalık anlatımı.
 
 ## Nasıl çalıştırılır?
 **Google Colab:** `notebooks/analiz.ipynb` dosyasını açın, ardından *Çalışma zamanı → Tümünü çalıştır*. Veri bulunamazsa hücre CSV dosyasını yüklemenizi ister (`data/` klasöründeki dosyayı seçin).
