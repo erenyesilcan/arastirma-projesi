@@ -1,0 +1,36 @@
+@startuml
+skinparam dpi 200
+skinparam shadowing false
+skinparam defaultFontName "DejaVu Sans"
+skinparam defaultFontSize 12
+skinparam activity {
+  BackgroundColor #EAF2FC
+  BorderColor #2a78d6
+}
+title Activity Diyagramı: Veri Hazırlama ve Analiz Akışı
+start
+:Araştırma sorusuna uygun açık veri setlerini tara;
+repeat
+  :Bir veri seti seç;
+repeat while (Gerçek veri, uygun lisans ve gerekli değişkenler var mı?) is ([Hayır])
+->[Evet];
+:CSV dosyasını indir ve data/ klasörüne kaydet;
+:Eksik, tekrarlı ve aralık dışı değerleri kontrol et;
+if (Kontroller geçti mi?) then ([Evet])
+else ([Hayır])
+  :Sorunu belgele ve veriyi düzelt;
+endif
+:Değişkenleri yeniden kodla (çalışıyor, her zaman devam, GNO ≥ 3.00);
+:Betimsel istatistik ve yüzde tabloları;
+:Grafikleri üret (Şekil 1–4);
+:Mann–Whitney U, Fisher, Spearman testlerini uygula;
+if (p < 0,05?) then ([Evet])
+  :H₀ reddedilir;
+else ([Hayır])
+  :H₀ reddedilemez;
+endif
+:Karıştırıcı değişkeni (ders) kontrol et;
+:Sonuçları CSV / JSON / PNG olarak kaydet;
+:GitHub'a commit et ve raporu yaz;
+stop
+@enduml

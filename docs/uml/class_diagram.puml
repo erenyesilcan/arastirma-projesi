@@ -1,0 +1,58 @@
+@startuml
+skinparam dpi 200
+skinparam shadowing false
+skinparam defaultFontName "DejaVu Sans"
+skinparam defaultFontSize 12
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #2a78d6
+  HeaderBackgroundColor #EAF2FC
+}
+hide circle
+title Class Diyagramı: Kavramsal Veri Modeli
+
+class VeriSeti {
+  - ad: String
+  - doi: String
+  - lisans: String
+  - erisimTarihi: Date
+  - satirSayisi: Integer
+  + oku(yol: String): void
+  + kaliteKontrol(): Boolean
+}
+class Ogrenci {
+  - ogrenciNo: String
+  - yasGrubu: Integer
+  - ekIs: Boolean
+  - haftalikCalisma: Integer
+  - devam: Integer
+  - kumGNO: Integer
+  + gno3Ustu(): Boolean
+}
+class Ders {
+  - dersId: Integer
+}
+class NotKaydi {
+  - notKodu: Integer
+  + harfNotu(): String
+}
+class Analiz {
+  - alfa: Float
+  + betimselOzet(): Table
+  + grafikUret(): void
+}
+class TestSonucu {
+  - hipotez: String
+  - testAdi: String
+  - istatistik: Float
+  - pDegeri: Float
+  - etkiBuyuklugu: String
+  + karar(): String
+}
+
+VeriSeti "1" *-- "1..*" Ogrenci : içerir >
+Ogrenci "1" -- "1" NotKaydi : alır >
+Ders "1" -- "0..*" NotKaydi : verilir >
+Analiz "1" --> "1" VeriSeti : kullanır >
+Analiz "1" *-- "1..*" TestSonucu : üretir >
+@enduml

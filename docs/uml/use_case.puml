@@ -1,0 +1,43 @@
+@startuml
+skinparam dpi 200
+skinparam shadowing false
+skinparam defaultFontName "DejaVu Sans"
+skinparam defaultFontSize 12
+skinparam usecase {
+  BackgroundColor #EAF2FC
+  BorderColor #2a78d6
+}
+skinparam actorBorderColor #333333
+skinparam packageStyle rectangle
+left to right direction
+title Use Case Diyagramı: İkincil Veri Analizi Süreci
+
+actor "Araştırmacı\n(öğrenci)" as R
+actor "Ders yürütücüsü" as H
+actor "UCI ML Repository\n(dış sistem)" as UCI
+
+rectangle "Araştırma veri analizi süreci" {
+  usecase "Veri setini seç ve\nlisansını doğrula" as UC1
+  usecase "CSV verisini indir" as UC2
+  usecase "Veri kalitesini kontrol et" as UC3
+  usecase "Değişkenleri yeniden kodla" as UC4
+  usecase "Betimsel analiz yap" as UC5
+  usecase "Hipotez testlerini uygula" as UC6
+  usecase "Grafik ve tablo üret" as UC7
+  usecase "Keşif amaçlı karar\nağacı modeli kur" as UC8
+  usecase "Sonuçları GitHub'a\ncommit et" as UC9
+  usecase "Raporu ve repoyu incele" as UC10
+}
+
+R --> UC1
+R --> UC2
+R --> UC5
+R --> UC6
+R --> UC9
+UC2 --> UCI
+UC5 ..> UC3 : <<include>>
+UC6 ..> UC4 : <<include>>
+UC5 ..> UC7 : <<include>>
+UC8 ..> UC6 : <<extend>>
+H --> UC10
+@enduml
