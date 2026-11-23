@@ -1,0 +1,62 @@
+{
+  "veri_kaynagi": "UCI Higher Education Students Performance Evaluation, DOI 10.24432/C51G82, CC BY 4.0",
+  "erisim_tarihi": "2026-11-23",
+  "n": 145,
+  "calisan": 49,
+  "calisan_oran": 0.3379,
+  "testler": [
+    {
+      "hipotez": "H_a: Kümülatif GNO",
+      "test": "Mann–Whitney U",
+      "istatistik": 2258.5,
+      "p": 0.6899,
+      "etki": "r_rb = 0.040",
+      "ek_bilgi": "Welch t = -0.41, p = 0.6820; ort. çalışan 3.06 / çalışmayan 3.16"
+    },
+    {
+      "hipotez": "H_b: Dönem sonu ders notu",
+      "test": "Mann–Whitney U",
+      "istatistik": 1891.5,
+      "p": 0.0514,
+      "etki": "r_rb = 0.196",
+      "ek_bilgi": "Welch t = -2.10, p = 0.0383; ort. çalışan 2.71 / çalışmayan 3.49"
+    },
+    {
+      "hipotez": "H_c: Derse devam × çalışma",
+      "test": "Fisher kesin testi (2×2)",
+      "istatistik": 0.868,
+      "p": 0.8385,
+      "etki": "OR = 0.87",
+      "ek_bilgi": "Veride 'hiç devam etmeyen' öğrenci yok; tablo 2×2"
+    },
+    {
+      "hipotez": "H_d: Haftalık ders çalışma × GNO",
+      "test": "Spearman ρ",
+      "istatistik": 0.046,
+      "p": 0.5804,
+      "etki": "ρ = 0.046",
+      "ek_bilgi": ""
+    },
+    {
+      "hipotez": "H_d: Her zaman devam × GNO",
+      "test": "Spearman ρ",
+      "istatistik": 0.179,
+      "p": 0.0308,
+      "etki": "ρ = 0.179",
+      "ek_bilgi": ""
+    },
+    {
+      "hipotez": "Ek: Ders çalışma süresi × çalışma durumu",
+      "test": "Mann–Whitney U",
+      "istatistik": 2599.5,
+      "p": 0.2628,
+      "etki": "",
+      "ek_bilgi": ""
+    }
+  ],
+  "makine_ogrenmesi": {
+    "agac_dogruluk": 0.4966,
+    "agac_std": 0.0352,
+    "temel_dogruluk": 0.5517
+  }
+}

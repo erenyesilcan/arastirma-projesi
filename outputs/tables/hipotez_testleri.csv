@@ -1,0 +1,7 @@
+﻿hipotez,test,istatistik,p,etki,ek_bilgi,"karar (α=0,05)"
+H_a: Kümülatif GNO,Mann–Whitney U,2258.5,0.6899,r_rb = 0.040,"Welch t = -0.41, p = 0.6820; ort. çalışan 3.06 / çalışmayan 3.16",H₀ reddedilemedi
+H_b: Dönem sonu ders notu,Mann–Whitney U,1891.5,0.0514,r_rb = 0.196,"Welch t = -2.10, p = 0.0383; ort. çalışan 2.71 / çalışmayan 3.49",H₀ reddedilemedi
+H_c: Derse devam × çalışma,Fisher kesin testi (2×2),0.868,0.8385,OR = 0.87,Veride 'hiç devam etmeyen' öğrenci yok; tablo 2×2,H₀ reddedilemedi
+H_d: Haftalık ders çalışma × GNO,Spearman ρ,0.046,0.5804,ρ = 0.046,,H₀ reddedilemedi
+H_d: Her zaman devam × GNO,Spearman ρ,0.179,0.0308,ρ = 0.179,,H₀ reddedildi
+Ek: Ders çalışma süresi × çalışma durumu,Mann–Whitney U,2599.5,0.2628,,,H₀ reddedilemedi
